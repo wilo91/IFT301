@@ -1,0 +1,111 @@
+/* Apply a gradient background color to the header */
+header {
+    background: linear-gradient(to bottom right, #0044ff, #19a357);
+  }
+  
+  /* Add a drop shadow to the main section */
+  main {
+    box-shadow: 0px 0px 10px rgba(27, 163, 45, 0.5);
+  }
+  
+  /* Style the navigation links in the header */
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  nav li {
+    display: inline-block;
+  }
+  
+  nav a {
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 30px;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  nav a:hover {
+    background: #fff;
+    color: #0085ff;
+  }
+  
+  /* Style the OS cards */
+  .os-card {
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin-bottom: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .os-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+  }
+  
+  .os-card:hover::before {
+    opacity: 1;
+  }
+  
+  .os-card h2 {
+    font-size: 24px;
+    margin-top: 0;
+  }
+  
+  .os-card p {
+    margin: 0;
+    color: #333;
+  }
+  
+  .os-card ul {
+    list-style: none;
+    margin: 20px 0 0 0;
+    padding: 0;
+  }
+  
+  .os-card li {
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #666;
+  }
+  
+  .os-card li .support-type {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .os-card li .end-of-life {
+    font-weight: bold;
+    color: #ff0000;
+  }
+  
+  .moving-title {
+    animation: move 10s linear infinite;
+  }
+  
+  @keyframes move {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
